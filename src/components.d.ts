@@ -6,49 +6,49 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface LazyLoad {
         "altText": string;
         "imgSrc": string;
     }
-    interface MySpinner {
+    interface LazySpinner {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLLazyLoadElement extends Components.LazyLoad, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLLazyLoadElement: {
+        prototype: HTMLLazyLoadElement;
+        new (): HTMLLazyLoadElement;
     };
-    interface HTMLMySpinnerElement extends Components.MySpinner, HTMLStencilElement {
+    interface HTMLLazySpinnerElement extends Components.LazySpinner, HTMLStencilElement {
     }
-    var HTMLMySpinnerElement: {
-        prototype: HTMLMySpinnerElement;
-        new (): HTMLMySpinnerElement;
+    var HTMLLazySpinnerElement: {
+        prototype: HTMLLazySpinnerElement;
+        new (): HTMLLazySpinnerElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
-        "my-spinner": HTMLMySpinnerElement;
+        "lazy-load": HTMLLazyLoadElement;
+        "lazy-spinner": HTMLLazySpinnerElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface LazyLoad {
         "altText"?: string;
         "imgSrc"?: string;
     }
-    interface MySpinner {
+    interface LazySpinner {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
-        "my-spinner": MySpinner;
+        "lazy-load": LazyLoad;
+        "lazy-spinner": LazySpinner;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "my-spinner": LocalJSX.MySpinner & JSXBase.HTMLAttributes<HTMLMySpinnerElement>;
+            "lazy-load": LocalJSX.LazyLoad & JSXBase.HTMLAttributes<HTMLLazyLoadElement>;
+            "lazy-spinner": LocalJSX.LazySpinner & JSXBase.HTMLAttributes<HTMLLazySpinnerElement>;
         }
     }
 }

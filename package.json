@@ -1,7 +1,7 @@
 {
   "name": "lazy-load",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A web component to lazy load your images.",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
