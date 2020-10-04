@@ -7,8 +7,23 @@
 
     <script type="module" src="/build/lazy-load.esm.js"></script>
     <script nomodule src="/build/lazy-load.js"></script>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <lazy-load source-url="https://picsum.photos/id/1002/640/480" alt-text="A NASA image"></lazy-load>
+    <main>
+      <lazy-load img-src="https://picsum.photos/id/1002/640/480" alt-text="Satellite"></lazy-load>
+      <lazy-load img-src="https://picsum.photos/id/1003/640/480" alt-text="A fawn"></lazy-load>
+      <lazy-load img-src="https://picsum.photos/id/1004/640/480" alt-text="A couple kiss in the snow"></lazy-load>
+      <lazy-load img-src="https://picsum.photos/id/1005/640/480" alt-text="A person looks out over the sea"></lazy-load>
+      <lazy-load img-src="https://picsum.photos/id/1006/640/480" alt-text="A person looks out over a plain"></lazy-load>
+      <lazy-load img-src="https://picsum.photos/id/1008/640/480" alt-text="A woman reclines on a sofa"></lazy-load>
+    </main>
   </body>
 </html>
